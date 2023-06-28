@@ -32,9 +32,11 @@ section div input::placeholder{
 }
 
 
-.body header{
+header h1{
     text-align: center;
     margin-top: 229px;
+    font-family: 'Audiowide', cursive;
+    font-family: 'Poppins', sans-serif;
 }
 
 .button {
@@ -45,4 +47,35 @@ section div input::placeholder{
 
 .button:hover{
     background-color: blueviolet;
+}
+
+section div input{
+    margin-top: 2px;
+}
+
+
+@media (min-width: 800px) {
+    body {
+        background-size: cover;
+    }
+
+    section {
+        width: 30%;
+        font-size: 18px;
+    }
+
+    .button {
+        cursor: pointer;
+        margin: 6px;
+        padding: 6px;
+    }
+
+    section div input{
+        width: 180px;
+        margin-top: 6px;
+    }
+
+
+
+
 }

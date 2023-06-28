@@ -1,3 +1,10 @@
+
+body{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
 .environment{
     box-sizing: border-box;
     margin: 0px;
@@ -9,8 +16,6 @@
     background-repeat: no-repeat;
     height: 100vh;
 }
-
-
 
 
 
@@ -41,24 +46,43 @@
     right: 20px;
     bottom: 80px
 }
-
-.immunity_pow1, .fast_play1 {
+.fast_play1 {
     display: none;
     position: fixed;
-    bottom: 140px;
-    right: 30px;
+    bottom: 155px;
+    right: 130px;
 }
 
-.immunity_pow2, .fast_play2 {
+/* .immunity_pow2, .fast_play2 {
     display: none;
     position: fixed;
     bottom: 80px;
-    right: 30px;
-}
+    right: 130px;
+} */
 
 .score{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 40%;
+}
+
+@media (min-width: 800px){
+    .score {
+        font-size: xx-large;
+    }
+
+    .player, .object{
+        transform: scale(2);
+    }
+
+    .fast_play1{
+        transform: scale(1.5);
+        bottom: 290px;
+    }
+
+    .player {
+        bottom: 100px;
+    }
+
 }

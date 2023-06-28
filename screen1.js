@@ -4,38 +4,46 @@ const start = document.querySelector(".Start");
 const req = document.querySelector(".required");
 
 
-var obj_names; //object of arrays for storing names and scores
+// var obj_names; //object of arrays for storing names and scores
+var start_game = document.querySelector(".start_game");
 
-
+let obj = JSON.parse(localStorage.getItem("obj_names")) || []
 
 function storename() {
-    obj_names = JSON.parse(localStorage.getItem("names"));
-    console.log(obj_names)
-    if (obj_names === null) {
-        obj_names = {}
-        obj_names[req.value] = 0;
-        sessionStorage.setItem("curr_n",req.value);
-        localStorage.setItem("names", JSON.stringify(obj_names));
+    let scores = JSON.parse(localStorage.getItem("main_arr")) || [];
+   
+    if ( !(obj.includes(req.value))) {
+        obj.push(req.value) 
+        scores.push(0)
+        // sessionStorage.setItem("curr_n",req.value);
+        localStorage.setItem("obj_names", JSON.stringify(obj));
+   
     } 
-    console.log(JSON.parse(localStorage.getItem("names")))
+    localStorage.setItem("main_arr" , JSON.stringify(scores))
+    localStorage.setItem("curr_names", req.value);
 }
 
 // localStorage.setItem()
 
-
-
 inst.addEventListener("click", () => {
     console.log("hbhs")
     storename()
-    window.open("screen2.html");
+    window.location.href = "screen2.html";
 })
 
 high.addEventListener("click", () => {
     storename()
-    // window.open("screen4.html");
+    window.location.href = "screen4.html";
 })
 
 start.addEventListener("click", () => {
     storename()
-    window.open("index.html");  
+    if(req.value == ""){
+        alert("please enter your nickname");
+    }else{
+        start_game.play()
+        window.location.href = "index.html"; 
+    } 
 })
+
+console.log(window.innerWidth);
