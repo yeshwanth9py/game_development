@@ -3,6 +3,7 @@ const home = document.querySelector(".home");
 const score_board = document.querySelector(".score_board");
 score_board.innerHTML = ""
 
+let temp_sound = sessionStorage.getItem("play_sound1");
 
 
 
@@ -11,9 +12,7 @@ let scores = JSON.parse(localStorage.getItem("main_arr"));
 let names = JSON.parse(localStorage.getItem("obj_names"));
 
 
-window.onload = function() {
-    game_over2.play();
-};
+
 
 // creating an array of objects with names and scores
 let data = scores.map((score, index) => ({ name: names[index], score }));
@@ -26,15 +25,17 @@ data.forEach(item => {
     score_board.appendChild(li);
 }); 
 
-
-console.log(Math.max(...scores))
-console.log(scores.indexOf(Math.max(...scores)))
-
-
+// i am playing game_over2 sound only when player looses game and lands here, not in the cases where user directly goes to leaderboard.
+window.onload = function() {
+    if(temp_sound){
+        game_over2.play();
+        sessionStorage.removeItem("play_sound1");
+    }
+};
 
 
 play.addEventListener("click",()=>{
-    window.location.href = "index.html";
+    window.location.href = "screen2.html";
 });
 
 home.addEventListener("click",()=>{

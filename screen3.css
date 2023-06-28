@@ -1,0 +1,45 @@
+body{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.body {
+    position: fixed;
+    background-color: rgba(55,179,241,255);   
+    background-image: url("./resources/bacground.jpg");
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+section{
+    border: 2px solid white;
+    width: 75%;
+    margin: 0 auto;
+    background-color: yellow;
+    color: black;
+    /* margin-top: 299px; */
+
+}
+
+.body header{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.go_back:hover{
+    cursor: pointer;
+}
+
+
+
+@media (min-width: 800px) {
+    footer{
+        margin-top: 20px;
+        text-align: center;
+    }
+}

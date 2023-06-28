@@ -6,25 +6,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="screen2.css"/>
 </head>
+
 <body>
-    <div class="body">
-        <header>
-            <h1>Instructions</h1>
-        </header>
-        <section>
-            <ul>
-                <li>Your character will automatically move forward, and your task is to control their movement to avoid obstacles.Each obstacle requires precise timing to overcome</li>
-                <br/>
-                <li>To jump, press the up arrow key, Timing is crucial! Jump at the right moment to clear obstacles and continue your journey.</li>
-                <br/>
-                <li>Be careful not to jump too early or too late, as mistimed jumps will lead to failure. Keep practicing to master the perfect timing!</li>
-                <br/>
-                <li>Along the way, you'll encounter power-ups and bonuses. Collect them to enhance your abilities, gain extra points, or unlock special abilities.</li>
-                <br/>
-                <li>As you progress, the speed of the scrolling environment will increase, making the game more challenging.</li>
-            </ul>
-        </section>
-        <footer><img src="resources/go-back-2.png" alt="go-back" width="60px" class="go_back"/></footer>
+    <div class="environment">
+        <div class="score">
+            Score:-<span class="score_act">0</span>
+        </div>
+        <div class="ground">
+            <div class="player"><img class="playerImg" src="resources/mario_run1.gif" alt="image" height="60px"></div>
+            <div class="object"><img src="resources/pipe.png" alt="image" height="40px"></div>
+            <div class="popup hidden">+100</div>
+            <audio class="game_over" src="sounds/lost.wav" preload></audio>
+            <audio class="power_up" src="sounds/power_up.wav"></audio>
+            <audio class="jump" src="sounds/jump.wav" preload></audio>
+            <div class="fast_play1"><img src="resources/score_up.png" alt="score_up" height="30px"></div>
+        </div>
     </div>
     <script src="screen2.js"></script>
 </body>

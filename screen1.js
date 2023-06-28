@@ -4,8 +4,8 @@ const start = document.querySelector(".Start");
 const req = document.querySelector(".required");
 
 
-// var obj_names; //object of arrays for storing names and scores
 var start_game = document.querySelector(".start_game");
+
 
 let obj = JSON.parse(localStorage.getItem("obj_names")) || []
 
@@ -15,7 +15,6 @@ function storename() {
     if ( !(obj.includes(req.value))) {
         obj.push(req.value) 
         scores.push(0)
-        // sessionStorage.setItem("curr_n",req.value);
         localStorage.setItem("obj_names", JSON.stringify(obj));
    
     } 
@@ -23,12 +22,12 @@ function storename() {
     localStorage.setItem("curr_names", req.value);
 }
 
-// localStorage.setItem()
+
 
 inst.addEventListener("click", () => {
     console.log("hbhs")
     storename()
-    window.location.href = "screen2.html";
+    window.location.href = "screen3.html";
 })
 
 high.addEventListener("click", () => {
@@ -42,8 +41,8 @@ start.addEventListener("click", () => {
         alert("please enter your nickname");
     }else{
         start_game.play()
-        window.location.href = "index.html"; 
+        window.location.href = "screen2.html"; 
     } 
 })
 
-console.log(window.innerWidth);
+// console.log(window.innerWidth);
