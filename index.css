@@ -1,0 +1,64 @@
+.environment{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;;
+    background-color: rgba(55,179,241,255);   
+    background-image: url("./resources/bacground.jpg");
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+
+
+
+.ground {
+    position: fixed;
+    bottom: 0px;
+    height: 88px;
+    width: 100vw;
+    background-image: url("./resources/ground.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.player {
+    position: fixed;
+    z-index: 2;
+    /* background-color: yellowgreen;
+    border: 1px solid yellowgreen; */
+    left: 20px;
+    bottom: 80px;
+}
+
+.object {
+    position: fixed;
+    z-index: 2;
+    background-color: brown;
+    border: 1px solid brown;
+    right: 20px;
+    bottom: 80px
+}
+
+.immunity_pow1, .fast_play1 {
+    display: none;
+    position: fixed;
+    bottom: 140px;
+    right: 30px;
+}
+
+.immunity_pow2, .fast_play2 {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+}
+
+.score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+}
