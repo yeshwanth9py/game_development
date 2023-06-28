@@ -39,5 +39,5 @@ play.addEventListener("click",()=>{
 });
 
 home.addEventListener("click",()=>{
-    window.location.href = "screen1.html";
+    window.location.href = "index.html";
 });
